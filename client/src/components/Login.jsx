@@ -1,11 +1,15 @@
 import React, { useRef } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
+import { v4 as  uuidV4 } from 'uuid'
 
-// Need to use uuid4 to generate random id when "creating new ID 13:05"
 
 export default function Login({ onIdSubmit }) {
     const idRef = useRef()
     
+    function createNewId() {
+        onIdSubmit(uuidV4())
+    }
+
     function handleSubmit(e) {
         e.preventDefault()
 
@@ -20,7 +24,7 @@ export default function Login({ onIdSubmit }) {
                     <Form.Control type="text" ref={idRef} required></Form.Control>
                 </Form.Group>
                 <Button type="submit" className="mt-2 me-2">Login</Button>
-                <Button variant="secondary" className="mt-2">Create A New ID</Button>
+                <Button onClick={createNewId} variant="secondary" className="mt-2">Create A New ID</Button>
             </Form>
         </Container>
     )
