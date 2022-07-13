@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Dashboard( {id} ) {
+export default function Conversations() {
     return (
        <div>CONVERSATIONS</div>
     )

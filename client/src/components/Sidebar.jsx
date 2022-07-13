@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { Tab, Nav, Button, Modal } from 'react-bootstrap'
 import Conversations from './Conversations'
 import Contacts from './Contacts'
+import NewConversationModal from './NewConversationModal'
+import NewContactModal from './NewContactModal'
 
 
 const CONVERSATIONS_KEY = 'conversations'
 const CONTACTS_KEY = 'contacts'
 
-export default function Dashboard( {id} ) {
+export default function Sidebar( {id} ) {
 
     const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY)
     const conversationsOpen = activeKey === CONVERSATIONS_KEY
@@ -44,7 +46,10 @@ export default function Dashboard( {id} ) {
             </Tab.Container>
 
             <Modal>
-                
+                {conversationsOpen ?
+                    <NewConversationModal /> :
+                    <NewContactModal />
+                }
             </Modal>
         </div>
     )
