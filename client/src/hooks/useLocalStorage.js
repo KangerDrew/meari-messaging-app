@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-const PREFIX = 'meari-messaging-'
 
+const PREFIX = 'meari-messaging-'
 
 export default function useLocalStorage(key, initialValue) {
 
