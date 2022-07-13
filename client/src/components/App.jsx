@@ -4,7 +4,7 @@ import Login from "./Login"
 
 function App() {
 
-    const [id, setId] = useLocalStorage()
+    const [id, setId] = useLocalStorage('id')
     
     return (
         <>
