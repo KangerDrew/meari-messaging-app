@@ -1,4 +1,5 @@
 # Notes on contents to review:
 
-- React contexts
-- React useState, specifically having function as "default"? (see useLocalStorage.js for example)
+- React contexts, need to learn how useContext works
+- React useState (review it)
+- Also for useState, find out what having function as "default"? (see useLocalStorage.js for example) is doing
